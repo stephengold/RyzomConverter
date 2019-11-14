@@ -1,3 +1,5 @@
+package net.bithaven.jme;
+
 import com.jme3.animation.AnimControl;
 import com.jme3.animation.Animation;
 import com.jme3.animation.Bone;
