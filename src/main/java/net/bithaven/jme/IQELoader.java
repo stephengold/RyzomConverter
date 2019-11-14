@@ -10,9 +10,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Locale;
 import java.util.Scanner;
-
-import org.lwjgl.BufferUtils;
-
+import com.jme3.util.BufferUtils;
 import com.jme3.animation.AnimControl;
 import com.jme3.animation.Animation;
 import com.jme3.animation.Bone;
