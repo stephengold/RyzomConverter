@@ -424,6 +424,7 @@ public class IQELoader implements AssetLoader {
 		}
 	}
 	
+	@SuppressWarnings("unchecked")       
 	private void setBuffer (Mesh mesh, int componentsPerElement, String vectorType, VertexBuffer.Type... types) {
 		int size;
 		if (vectorType.equals("vbi")) {
@@ -515,6 +516,7 @@ public class IQELoader implements AssetLoader {
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	private void handleVector(String[] args) throws IOException {
 		switch (args[0]) {
 		case "vp":
@@ -571,6 +573,7 @@ public class IQELoader implements AssetLoader {
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	private void addVector (String[] args, int floatsPerVector, int oneAfter) {
 		LinkedList<Float> list = (LinkedList<Float>)vectors.get(args[0]);
 		if (list == null) {
