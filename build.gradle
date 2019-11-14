@@ -1,0 +1,58 @@
+plugins {
+    id 'application'
+    id 'java'
+}
+
+description = 'convert 3-D models from the Ryzom Asset Repository'
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+ext {
+    // current versions of the libraries
+    jmonkeyengineVersion = '3.2.4-stable'
+}
+
+gradle.projectsEvaluated {
+    tasks.withType(JavaCompile) { // compile-time options:
+        options.compilerArgs << '-Xlint:unchecked'
+        options.deprecation = true
+        options.encoding = 'UTF-8'
+    }
+    tasks.withType(JavaExec) { // runtime options:
+        classpath sourceSets.main.runtimeClasspath
+        enableAssertions true
+        jvmArgs '-Xms5g', '-Xmx5g' // enlarge the Java heap
+    }
+}
+
+mainClassName = 'net.bithaven.jme.ryzom.RyzomConverter'
+if (!hasProperty('mainClass')) {
+    ext.mainClass = mainClassName
+}
+jar.manifest.attributes('Main-Class': mainClassName)
+
+task runSuggestedArgs(type: JavaExec) {
+    args = ['../RyzomAssets']
+    main mainClassName
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'org.apache.directory.studio:org.apache.commons.io:2.4'
+    compileOnly 'org.realityforge.javax.annotation:javax.annotation:1.0.1'
+
+    implementation 'org.jmonkeyengine:jme3-core:' + jmonkeyengineVersion
+    runtimeOnly 'org.jmonkeyengine:jme3-blender:' + jmonkeyengineVersion
+    runtimeOnly 'org.jmonkeyengine:jme3-desktop:' + jmonkeyengineVersion
+    runtimeOnly 'org.jmonkeyengine:jme3-jogg:' + jmonkeyengineVersion
+    runtimeOnly 'org.jmonkeyengine:jme3-plugins:' + jmonkeyengineVersion
+}
+
+// cleanup tasks
+clean.dependsOn('cleanWrittenAssets')
+task cleanWrittenAssets(type: Delete) {
+    delete 'assets/ryzom-assets/export'
+}
