@@ -257,7 +257,7 @@ public final class RyzomConverter extends SimpleApplication {
                                     e.printStackTrace();
                                 }
                                 key = new TextureKey(toPath.subpath(1, toPath.getNameCount()).toString(), key.isFlipY());
-                                t = am.loadTexture(key);
+                                t.setKey(key);
                                 m.setTexture("ColorMap", t);
                             }
                         }
