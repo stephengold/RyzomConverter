@@ -19,6 +19,7 @@ gradle.projectsEvaluated {
         options.encoding = 'UTF-8'
     }
     tasks.withType(JavaExec) { // runtime options:
+        args = ['../RyzomAssets']
         classpath sourceSets.main.runtimeClasspath
         enableAssertions true
         jvmArgs '-Xms5g', '-Xmx5g' // enlarge the Java heap
@@ -30,11 +31,6 @@ if (!hasProperty('mainClass')) {
     ext.mainClass = mainClassName
 }
 jar.manifest.attributes('Main-Class': mainClassName)
-
-task runSuggestedArgs(type: JavaExec) {
-    args = ['../RyzomAssets']
-    main mainClassName
-}
 
 repositories {
     jcenter()

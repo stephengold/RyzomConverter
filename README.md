@@ -20,7 +20,7 @@ The suggested procedure is:
   4. cd ..
   5. git clone https://github.com/stephengold/RyzomConverter.git
   6. cd RyzomConverter
-  7. ./gradlew runSuggestedArgs
+  7. ./gradlew run
 
 Converted files are written to the assets/ryzom-assets/export folder.
 For more information, see
