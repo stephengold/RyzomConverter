@@ -144,15 +144,20 @@ public final class RyzomConverter extends SimpleApplication {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
+
                 for (Path p : ds) {
-                    logger.log(INFO, "Loading " + part.toString() + ": " + p.getFileName().toString());
+                    String baseAssetName = p.getFileName().toString();
+                    logger.log(INFO, "Loading " + part.toString() + ": " + baseAssetName);
                     List<Spatial> variants = Ryzom.generateSpatialsFromPath(am, p, ryzomRootPath);
                     logger.log(INFO, "Exporting " + variants.size() + " variants.");
                     for (Spatial s : variants) {
-                        s.setName(s.getName() + "@" + s.getUserData("ryzom_skin"));
+                        String skinCode = s.getUserData("ryzom_skin");
+                        String skinName = skinCode.replace(":", "x");
+                        s.setName(baseAssetName + "@" + skinName);
                         exportSpatial(s);
                     }
                 }
+
                 try {
                     ds.close();
                 } catch (IOException e) {
