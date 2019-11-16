@@ -14,6 +14,7 @@ ext {
 
 gradle.projectsEvaluated {
     tasks.withType(JavaCompile) { // compile-time options:
+        options.compilerArgs << '-Xdiags:verbose'
         options.compilerArgs << '-Xlint:unchecked'
         options.deprecation = true
         options.encoding = 'UTF-8'
@@ -22,7 +23,8 @@ gradle.projectsEvaluated {
         args = ['../RyzomAssets']
         classpath sourceSets.main.runtimeClasspath
         enableAssertions true
-        jvmArgs '-Xms5g', '-Xmx5g' // enlarge the Java heap
+        //jvmArgs '-verbose:gc'
+        jvmArgs '-Xms3g', '-Xmx3g' // enlarge the Java heap
     }
 }
 
