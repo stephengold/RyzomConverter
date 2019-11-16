@@ -15,13 +15,13 @@ you should do so under that license.
 
 The suggested procedure (for Bash users) is:
 
-  1. `mkdir RyzomAssets`
-  2. `cd RyzomAssets`
-  3. `git clone https://bitbucket.org/ccxvii/ryzom-assets.git`
-  4. `cd ..`
-  5. `git clone https://github.com/stephengold/RyzomConverter.git`
-  6. `cd RyzomConverter`
-  7. `./gradlew run`
+ 1. `mkdir RyzomAssets`
+ 2. `cd RyzomAssets`
+ 3. `git clone https://bitbucket.org/ccxvii/ryzom-assets.git`
+ 4. `cd ..`
+ 5. `git clone https://github.com/stephengold/RyzomConverter.git`
+ 6. `cd RyzomConverter`
+ 7. `./gradlew run`
 
 Converted assets are written to the
 `RyzomConverter/assets/ryzom-assets/export` folder.
@@ -39,13 +39,13 @@ only assets in the "actors" folder, and even there, the
 
 To construct a character in Java code:
 
-  1. register a locator:
+ 1. register a locator:
     + `assetManager.registerLocator("../RyzomConverter/assets", FileLocator.class);`
-  2. load an animations asset and attach it to the scene graph:
+ 2. load an animations asset and attach it to the scene graph:
     + `ModelKey key = new ModelKey("ryzom-assets/export/animations_ge_hom.j3o");`
     + `Node characterNode = (Node) assetManager.loadAsset(key);`
     + `rootNode.attachChild(characterNode)`
-  3. load a geometry asset for each body part and attach it to the character node:
+ 3. load a geometry asset for each body part and attach it to the character node:
 
     key = new ModelKey("ryzom-assets/export/fy_hom_armor01_armpad.j3o");
     Spatial arms = manager.loadAsset(key);
