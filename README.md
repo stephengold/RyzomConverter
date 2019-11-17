@@ -13,6 +13,20 @@ The Ryzom Asset Repository is available under a
 so if you distribute the converted files or anything built from them,
 you should do so under that license.
 
+<a name="gallery"/>
+
+## Screenshot gallery
+
+<img height="360" src="https://i.imgur.com/wVcItj0.jpg">
+
+The screenshot is derived from Ryzom Asset Repository, licensed CC-BY-SA 3.0.
+Alweth is acknowledged for authoring `RyzomConverter`
+and providing it free of charge.
+
+<a name="procedure"/>
+
+## Conversion procedure
+
 The suggested procedure (for Bash users) is:
 
  1. `mkdir RyzomAssets`
@@ -36,6 +50,10 @@ The converted assets occupy less storage space
 because not all assets in the Ryzom Asset Repository get converted:
 only assets in the "actors" folder, and even there, the
 "banners", "tools", and "weapons" sub-folders are skipped.
+
+<a name="next"/>
+
+## Next steps
 
 To construct a character in Java code:
 
