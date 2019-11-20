@@ -37,6 +37,8 @@ The suggested procedure (for Bash users) is:
  6. `cd RyzomConverter`
  7. `./gradlew run`
 
+The final step may take 4 minutes or more.
+
 Converted assets are written to the
 `RyzomConverter/assets/ryzom-assets/export` folder.
 They should occupy about 500 MBytes of filesystem storage.
@@ -50,6 +52,8 @@ The converted assets occupy less storage space
 because not all assets in the Ryzom Asset Repository get converted:
 only assets in the "actors" folder, and even there, the
 "banners", "tools", and "weapons" sub-folders are skipped.
+
+The asset names and animation names are in a mixture of French and English.
 
 <a name="next"/>
 
