@@ -43,7 +43,7 @@ Converted assets are written to the
 `RyzomConverter/assets/ryzom-assets/export` folder.
 They should occupy about 500 MBytes of filesystem storage.
 There should be 4 J3O animations files,
-697 J3O geometry files, and 1183 PNG texture files.
+697 J3O geometries files, and 1183 PNG texture files.
 Once the converter has successfully run to completion,
 the RyzomAssets folder
 (which should occupy about 3.5 GBytes of storage) may be deleted.
@@ -62,13 +62,21 @@ The asset names and animation names are in a mixture of French and English.
 To construct a character in Java code:
 
  1. register a locator:
-    + `assetManager.registerLocator("../RyzomConverter/assets", FileLocator.class);`
- 2. load an animations asset and attach it to the scene graph:
-    + `ModelKey key = new ModelKey("ryzom-assets/export/animations_ge_hom.j3o");`
-    + `Node characterNode = (Node) assetManager.loadAsset(key);`
-    + `rootNode.attachChild(characterNode)`
- 3. load a geometry asset for each body part and attach it to the character node:
+```
+    assetManager.registerLocator("../RyzomConverter/assets", FileLocator.class);
+```
 
+ 2. load an animations asset and attach it to the scene graph:
+```
+    ModelKey key = new ModelKey("ryzom-assets/export/animations_ca_hom.j3o");
+    Node characterNode = (Node) assetManager.loadAsset(key);
+    rootNode.attachChild(characterNode);
+```
+
+ 3. load a geometries asset for each body part
+    and attach it to the character node.
+    If using the `ca` skeletal group, the code might look something like this:
+```
     key = new ModelKey("ryzom-assets/export/fy_hom_armor01_armpad.j3o");
     Spatial arms = manager.loadAsset(key);
     characterNode.attachChild(arms);
@@ -96,6 +104,9 @@ To construct a character in Java code:
     key = new ModelKey("ryzom-assets/export/fy_hom_armor01_pantabottes.j3o");
     Spatial legs = manager.loadAsset(key);
     characterNode.attachChild(legs);
+```
+
+ 5. disable scene-graph culling for all model spatials
 
 Each geometry is designed for a specific skeletal group, either `ca` or `ge`.
 Geometries returned by `loadAsset()` are for the `ca` skeletal group.
