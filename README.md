@@ -116,8 +116,19 @@ are stashed in the `ryzom_alternative` user data of each geometry asset.
  + The `ca` group provides 76 animations for males and 53 for females.
  + The `ge` group provides 1654 animations for males and 1452 for females.
 
+<a name="links"/>
+
+## External links
+
 Open-source demo software is available
 from [GitHub](https://github.com/stephengold/RyzomDemos).
 
-For more information, read
-[the relevant topic at the jME Forum](https://hub.jmonkeyengine.org/t/convert-all-ryzom-character-models-and-animations-to-j3o-format/37859).
+For more information about RyzomConverter, read
+[its topic at the jME Forum](https://hub.jmonkeyengine.org/t/convert-all-ryzom-character-models-and-animations-to-j3o-format/37859).
+
+For more information about The Saga or Ryzom (the MMORPG for which
+the assets were created) read
+[its Wikipedia article](https://en.wikipedia.org/wiki/Ryzom).
+
+For more information about the licensing of the Ryzom Asset Repository, read
+[the May 2010 Creative Commons press release](https://creativecommons.org/2010/05/06/massively-multiplayer-game-ryzom-released-as-free-culture-and-free-software/).
