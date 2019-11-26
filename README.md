@@ -41,9 +41,9 @@ The final step may take 4 minutes or more.
 
 Converted assets are written to the
 `RyzomConverter/assets/ryzom-assets/export` folder.
-They should occupy about 500 MBytes of filesystem storage.
+They should occupy about 750 MBytes of filesystem storage.
 There should be 4 J3O animations files,
-697 J3O geometries files, and 1183 PNG texture files.
+1958 J3O geometries files, and 1183 PNG texture files.
 Once the converter has successfully run to completion,
 the RyzomAssets folder
 (which should occupy about 3.5 GBytes of storage) may be deleted.
