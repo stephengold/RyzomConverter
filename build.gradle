@@ -21,6 +21,8 @@ gradle.projectsEvaluated {
     }
     tasks.withType(JavaExec) { // runtime options:
         args = ['../RyzomAssets']
+        //args = ['../RyzomAssets', 'noanimations'] // models only
+        //args = ['../RyzomAssets', 'nomodels'] // animations only
         classpath sourceSets.main.runtimeClasspath
         enableAssertions true
         //jvmArgs '-verbose:gc'
