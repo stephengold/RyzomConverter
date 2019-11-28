@@ -126,7 +126,7 @@ from [GitHub](https://github.com/stephengold/RyzomDemos).
 For more information about RyzomConverter, read
 [its topic at the jME Forum](https://hub.jmonkeyengine.org/t/convert-all-ryzom-character-models-and-animations-to-j3o-format/37859).
 
-For more information about The Saga or Ryzom (the MMORPG for which
+For more information about *The Saga of Ryzom* (the MMORPG for which
 the assets were created) read
 [its Wikipedia article](https://en.wikipedia.org/wiki/Ryzom).
 
