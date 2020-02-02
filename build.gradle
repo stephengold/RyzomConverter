@@ -37,6 +37,7 @@ if (!hasProperty('mainClass')) {
 jar.manifest.attributes('Main-Class': mainClassName)
 
 repositories {
+    //mavenLocal()
     jcenter()
 }
 
@@ -45,8 +46,11 @@ dependencies {
     compileOnly 'org.realityforge.javax.annotation:javax.annotation:1.0.1'
 
     implementation 'org.jmonkeyengine:jme3-core:' + jmonkeyengineVersion
-    runtimeOnly 'org.jmonkeyengine:jme3-blender:' + jmonkeyengineVersion
     runtimeOnly 'org.jmonkeyengine:jme3-desktop:' + jmonkeyengineVersion
+
+    // RyzomConverter doesn't use jme3-blender, jme3-jogg, or jme3-plugins
+    //  -- they are included solely to avoid warnings from AssetConfig
+    runtimeOnly 'org.jmonkeyengine:jme3-blender:' + jmonkeyengineVersion
     runtimeOnly 'org.jmonkeyengine:jme3-jogg:' + jmonkeyengineVersion
     runtimeOnly 'org.jmonkeyengine:jme3-plugins:' + jmonkeyengineVersion
 }
