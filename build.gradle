@@ -7,10 +7,8 @@ description = 'convert 3-D models from the Ryzom Asset Repository'
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
-ext {
-    // current versions of the libraries
-    jmonkeyengineVersion = '3.2.4-stable'
-}
+// current version of the Engine:
+ext.jmonkeyengineVersion = '3.2.4-stable'
 
 tasks.withType(JavaCompile) { // compile-time options:
     options.compilerArgs << '-Xdiags:verbose'
