@@ -8,12 +8,12 @@ sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
 // current version of the Engine:
-ext.jmonkeyengineVersion = '3.2.4-stable'
+ext.jmonkeyengineVersion = '3.5.0-stable'
 
 tasks.withType(JavaCompile) { // compile-time options:
     options.compilerArgs << '-Xdiags:verbose'
     options.compilerArgs << '-Xlint:unchecked'
-    options.deprecation = true
+    //options.deprecation = true
     options.encoding = 'UTF-8'
 }
 
@@ -45,9 +45,8 @@ dependencies {
     implementation 'org.jmonkeyengine:jme3-core:' + jmonkeyengineVersion
     runtimeOnly 'org.jmonkeyengine:jme3-desktop:' + jmonkeyengineVersion
 
-    // RyzomConverter doesn't use jme3-blender, jme3-jogg, or jme3-plugins
+    // RyzomConverter doesn't use jme3-jogg nor jme3-plugins
     //  -- they are included solely to avoid warnings from AssetConfig
-    runtimeOnly 'org.jmonkeyengine:jme3-blender:' + jmonkeyengineVersion
     runtimeOnly 'org.jmonkeyengine:jme3-jogg:' + jmonkeyengineVersion
     runtimeOnly 'org.jmonkeyengine:jme3-plugins:' + jmonkeyengineVersion
 }
