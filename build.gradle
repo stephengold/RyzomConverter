@@ -24,7 +24,7 @@ tasks.withType(JavaExec) { // runtime options:
     classpath sourceSets.main.runtimeClasspath
     enableAssertions true
     //jvmArgs '-verbose:gc'
-    jvmArgs '-Xms3g', '-Xmx3g' // enlarge the Java heap
+    jvmArgs '-Xms4g', '-Xmx4g' // enlarge the Java heap
 }
 
 mainClassName = 'net.bithaven.jme.ryzom.RyzomConverter'
