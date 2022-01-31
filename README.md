@@ -13,7 +13,8 @@ The Ryzom Asset Repository is available under a
 so if you distribute the converted files or anything built from them,
 you should do so under that license.
 
-<a name="gallery"/>
+
+<a name="gallery"></a>
 
 ## Screenshot gallery
 
@@ -23,7 +24,8 @@ The screenshot is derived from Ryzom Asset Repository, licensed CC-BY-SA 3.0.
 Alweth is acknowledged for authoring `RyzomConverter`
 and providing it free of charge.
 
-<a name="procedure"/>
+
+<a name="procedure"></a>
 
 ## Conversion procedure
 
@@ -55,7 +57,8 @@ only assets in the "actors" folder, and even there, the
 
 The asset names and animation names are in a mixture of French and English.
 
-<a name="next"/>
+
+<a name="next"></a>
 
 ## Next steps
 
@@ -116,7 +119,8 @@ are stashed in the `ryzom_alternative` user data of each geometry asset.
  + The `ca` group provides 76 animations for males and 53 for females.
  + The `ge` group provides 1654 animations for males and 1452 for females.
 
-<a name="links"/>
+
+<a name="links"></a>
 
 ## External links
 
