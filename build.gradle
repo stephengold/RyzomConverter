@@ -4,8 +4,8 @@ plugins {
 }
 
 description = 'convert 3-D models from the Ryzom Asset Repository'
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
 
 // current version of the Engine:
 ext.jmonkeyengineVersion = '3.5.0-stable'
