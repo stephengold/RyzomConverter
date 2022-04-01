@@ -59,6 +59,6 @@ dependencies {
 
 clean.dependsOn('cleanWrittenAssets')
 
-task cleanWrittenAssets(type: Delete) { // output directory
+tasks.register('cleanWrittenAssets', Delete) { // output directory
     delete 'assets/ryzom-assets/export'
 }
