@@ -29,11 +29,9 @@ tasks.withType(JavaExec) { // Java runtime options:
     jvmArgs '-Xms4g', '-Xmx4g' // to enlarge the Java heap
 }
 
-mainClassName = 'net.bithaven.jme.ryzom.RyzomConverter'
-if (!hasProperty('mainClass')) {
-    ext.mainClass = mainClassName
+application {
+    mainClass = 'net.bithaven.jme.ryzom.RyzomConverter'
 }
-jar.manifest.attributes('Main-Class': mainClassName)
 
 repositories {
     //mavenLocal() // to find local SNAPSHOTs of libraries
