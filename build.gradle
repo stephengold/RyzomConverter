@@ -21,12 +21,12 @@ tasks.withType(JavaCompile) { // Java compile-time options:
 
 tasks.withType(JavaExec) { // Java runtime options:
     args = ['../RyzomAssets']
-    //args = ['../RyzomAssets', 'noanimations'] // models only
-    //args = ['../RyzomAssets', 'nomodels'] // animations only
+    //args = ['../RyzomAssets', 'noanimations'] // to convert models only
+    //args = ['../RyzomAssets', 'nomodels'] // to convert animations only
     classpath sourceSets.main.runtimeClasspath
     enableAssertions true
     //jvmArgs '-verbose:gc'
-    jvmArgs '-Xms4g', '-Xmx4g' // enlarge the Java heap
+    jvmArgs '-Xms4g', '-Xmx4g' // to enlarge the Java heap
 }
 
 mainClassName = 'net.bithaven.jme.ryzom.RyzomConverter'
