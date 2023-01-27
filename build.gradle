@@ -2,7 +2,6 @@
 
 plugins {
     id 'application'
-    id 'java'
 }
 
 ext.jme3Version = '3.5.2-stable' // current version of JMonkeyEngine
