@@ -33,6 +33,9 @@ application {
     mainClass = 'net.bithaven.jme.ryzom.RyzomConverter'
 }
 
+configurations.all {
+   resolutionStrategy.cacheChangingModulesFor 0, 'seconds' // to disable caching of SNAPSHOTs
+}
 repositories {
     //mavenLocal() // to find local SNAPSHOTs of libraries
     mavenCentral()
