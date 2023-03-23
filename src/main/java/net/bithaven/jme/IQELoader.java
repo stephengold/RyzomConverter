@@ -91,14 +91,14 @@ public class IQELoader implements AssetLoader {
         String folderName = key.getFolder();
         //HACK: JME's FileLocator seems to behave differently when used to access files outside the standard
         // assets folder. Specifically, the folder is not returned by getFolder() but included in getName().
-        if (folderName.equals("")) {
+        if (folderName.isEmpty()) {
             folderName = objName.substring(0, objName.lastIndexOf('\\') + 1);
         }
 
         //System.out.println("Loading IQE: " + objName);
         String ext = key.getExtension();
         objName = objName.substring(0, objName.length() - ext.length() - 1);
-        if (folderName != null && folderName.length() > 0) {
+        if (folderName != null && !folderName.isEmpty()) {
             objName = objName.substring(folderName.length());
         }
 
