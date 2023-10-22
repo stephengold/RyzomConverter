@@ -11,7 +11,7 @@ java {
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
-tasks.withType(JavaCompile) { // Java compile-time options:
+tasks.withType(JavaCompile).configureEach { // Java compile-time options:
     options.compilerArgs << '-Xdiags:verbose'
     options.compilerArgs << '-Xlint:unchecked'
     //options.deprecation = true // to provide detailed deprecation warnings
@@ -21,7 +21,7 @@ tasks.withType(JavaCompile) { // Java compile-time options:
     }
 }
 
-tasks.withType(JavaExec) { // Java runtime options:
+tasks.withType(JavaExec).configureEach { // Java runtime options:
     args = ['../RyzomAssets']
     //args = ['../RyzomAssets', 'noanimations'] // to convert models only
     //args = ['../RyzomAssets', 'nomodels'] // to convert animations only
@@ -35,7 +35,7 @@ application {
     mainClass = 'net.bithaven.jme.ryzom.RyzomConverter'
 }
 
-configurations.all {
+configurations.configureEach {
    resolutionStrategy.cacheChangingModulesFor 0, 'seconds' // to disable caching of SNAPSHOTs
 }
 repositories {
