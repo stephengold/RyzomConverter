@@ -1,10 +1,10 @@
-// Gradle build script for the RyzomConverter project
+// Gradle script to build the RyzomConverter project
 
 plugins {
     id 'application'
 }
 
-ext.jme3Version = '3.6.1-stable' // current version of JMonkeyEngine
+ext.jme3Version = '3.7.0-alpha3.1' // current version of JMonkeyEngine
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
