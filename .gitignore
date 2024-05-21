@@ -1,4 +1,11 @@
+# Ignore Gradle's project-specific cache directory:
 /.gradle/
+
+# Ignore IDE-specific directories:
 /.nb-gradle/
+
+# Ignore the output directory:
 /assets/ryzom-assets/export
+
+# Ignore Gradle's build output directories:
 /build/
