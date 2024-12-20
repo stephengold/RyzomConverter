@@ -28,7 +28,7 @@ tasks.withType(JavaExec).configureEach { // Java runtime options:
     //args = ['../RyzomAssets', 'noanimations'] // to convert models only
     //args = ['../RyzomAssets', 'nomodels'] // to convert animations only
     classpath sourceSets.main.runtimeClasspath
-    enableAssertions true
+    enableAssertions = true
     //jvmArgs '-verbose:gc'
     jvmArgs '-Xms4g', '-Xmx4g' // to enlarge the Java heap
 }
