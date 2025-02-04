@@ -7,7 +7,7 @@ jme = "3.8.0-alpha2"
 [libraries]
 
 commons-io = "org.apache.directory.studio:org.apache.commons.io:2.4"
-javax-annotation = "org.realityforge.javax.annotation:javax.annotation:1.0.1"
+javax-annotation = "org.realityforge.javax.annotation:javax.annotation:1.1.1"
 jme3-core = { module = "org.jmonkeyengine:jme3-core", version.ref = "jme" }
 jme3-desktop = { module = "org.jmonkeyengine:jme3-desktop", version.ref = "jme" }
 jme3-jogg = { module = "org.jmonkeyengine:jme3-jogg", version.ref = "jme" }
