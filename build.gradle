@@ -43,7 +43,7 @@ configurations.configureEach {
 
 dependencies {
     implementation(libs.commons.io)
-    compileOnly(libs.javax.annotation)
+    compileOnly(libs.javax.annotation) // for Nonnull and Nullable
 
     implementation(libs.jme3.core)
     runtimeOnly(libs.jme3.desktop)
