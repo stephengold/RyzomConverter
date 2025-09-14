@@ -6,7 +6,7 @@ jme = "3.9.0-alpha4"
 
 [libraries]
 
-commons-io = "org.apache.directory.studio:org.apache.commons.io:2.4"
+commons-io = "commons-io:commons-io:2.20.0"
 javax-annotation = "org.realityforge.javax.annotation:javax.annotation:1.1.1"
 
 jme3-core = { module = "org.jmonkeyengine:jme3-core", version.ref = "jme" }
